@@ -11,7 +11,7 @@ const config = {
   entry: [
     'babel-polyfill',
     'react-hot-loader/patch',
-    'webpack-dev-server/client?http://localhost:3001',
+    'webpack-dev-server/client?http://localhost:8088',
     'webpack/hot/only-dev-server',
     './main.js',
     './assets/scss/main.scss'
