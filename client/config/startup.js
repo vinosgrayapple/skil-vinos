@@ -1,3 +1,4 @@
+/*eslint-disable*/
 import React from 'react'
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
@@ -27,6 +28,6 @@ Startup.defaultProps = {
 const mapStateToProps = () => ({
 })
 
-const mapDispatchToProps = dispatch => bindActionCreators({ }, dispatch)
+const mapDispatchToProps = dispatch => bindActionCreators({}, dispatch)
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Startup))

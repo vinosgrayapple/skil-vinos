@@ -1,3 +1,4 @@
+/*eslint-disable*/
 import React from 'react';
 import PropTypes from 'prop-types'
 import { Provider, connect } from 'react-redux';
@@ -14,23 +15,23 @@ import NotFound from '../components/404';
 
 import Startup from './startup';
 
-
+/*eslint no-useless-rename: ["error", { ignoreDestructuring: true }]*/
 const OnlyAnonymousRoute = ({ component: Component, ...rest }) => {
-  const func = props => (!!rest.user && !!rest.user.name && !!rest.token
+  const func = props => (!(!!rest.user && !!rest.user.name && !!rest.token)
     ? <Redirect to={{ pathname: '/' }} />
     : <Component {...props} />)
   return (<Route {...rest} render={func} />)
 }
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
-  const func = props => (!!rest.user && !!rest.user.name && !!rest.token
+  const func = props => (!(!!rest.user && !!rest.user.name && !!rest.token)
     ? <Component {...props} />
     : (
       <Redirect to={
-          {
-            pathname: '/login'
-          }
+        {
+          pathname: '/login'
         }
+      }
       />
     )
   )
