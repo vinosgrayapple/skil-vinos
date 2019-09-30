@@ -37,7 +37,7 @@ const config = {
     hot: true,
     contentBase: resolve(__dirname, 'dist/assets'),
     watchContentBase: true,
-    host: 'localhost',
+    host: '0.0.0.0',
     port: 8088,
 
     historyApiFallback: true,
