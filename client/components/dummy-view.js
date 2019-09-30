@@ -2,6 +2,9 @@ import React from 'react';
 
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee, faMugHot } from '@fortawesome/free-solid-svg-icons'
+
 import Head from './head'
 
 class Dummy extends React.Component {
@@ -27,12 +30,11 @@ class Dummy extends React.Component {
     return (
       <div>
         <Head title="Hello" />
-        <div className="row justify-content-center">
+        <div className="row justify-content-center" style={{ padding: '20px' }}>
           <div className="col col-lg-6">
-            <div className="alert alert-primary display-1  text-center" role="alert">{this.state.counter}</div>
+            <div className="alert alert-primary display-1  text-center" role="alert">{this.state.counter} <FontAwesomeIcon icon={faMugHot} className="" /></div>
             <button type="button" onClick={this.addOne} className="btn btn-block btn-lg btn-raised btn-primary">
-              <i className="fas fa-spinner text-primary rounded-circle bg-white mr-1" style={{ padding: '7px' }} />
-              ADD
+              <FontAwesomeIcon icon={faCoffee} className="" /> ADD
             </button>
           </div>
         </div>
